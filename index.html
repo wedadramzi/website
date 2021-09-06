@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <style>
+		body{
+		font-family: tahoma;
+		text-align: center;
+		}
+		header{
+		letter-spacing:6px;
+		background: royalblue;
+		padding: 20px;
+		color: white;
+		}
+		header h1{
+		font-size: 5em;
+		}
+		h2{
+		font-size: 2em;
+		width: 100%;
+		}
+		section{
+		padding: 30px;
+		margin-bottom: 40px;
+		}
+		@media screen and (min-width: 50em){
+		.card{
+		border: 1px solid #ccc;
+		background-color: ivory;
+		margin: 25px;
+		padding: 25px;
+		flex-basis: 325px;
+		box-shadow: 6px 6px 10px lightpink;
+		}
+		}
+		.icons{
+		font-size: 8em;
+		padding: 25px;
+		}
+		button, .button{
+		background-color: royalblue;
+		border: 1px;
+		color: white;
+		border-radius: 20px;
+		font-size: 3em;
+		padding: 10px;
+		width: 100%;
+		margin-bottom: 10px;
+		}
+		.button: hover{
+		box-shadow: 6px 10px 2px yellow;
+		}
+		 
+		.container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+       .blue{
+        background-color: teal;
+        }
+		table{
+		width:100%;
+		background-color: yellow;
+		margin: auto;
+		}
+		td{
+		padding: 10px;
+		}
+       #my-order, #my-form{
+	   background-color: #29C1C4;
+      padding: 25px;
+
+	   }
+		
+        </style>
+     </head>
+	 <body>
+	    <header>
+		<h1>
+		 wedad CupCakes
+        </h1>
+		<h4>
+		cute cupckackes for best besties^^
+		</h4>
+		
+		</header>
+		<section class="blue container">
+		<h2>
+		WELCOME
+		</h2>
+		<p>
+		To create beautiful cupckakes for clients in Mansoura area.
+		</p>
+		<br>
+		<p>
+		ABOUT US: founded in 2021, by wedad ramzi
+		<br>
+		we've served over 50 clients and delivered over 1000 tasty treats.
+		</p>
+		<br>
+		
+		<article class="card">
+		<div class="icons"> &#x1F60E </div>
+		<h3> David Mukhura </h3>
+		<p> web devloper - create beatiful besties for businesses in soweto. </p>
+		<button class="button"> contact </button>
+		</article>
+		
+		<article class="card">
+        <div class="icons">&#9734;</div>
+        <h3>Sub-title</h3>
+        <p> ... text. </p>
+        <button>Learn More</button>
+        </article>
+		</section>
+		<br>
+		<section>
+		<table >
+		<h2>
+		My ordered Form
+		</h2>
+		<tr>
+		<td>
+		name:
+		</td>
+		<td>
+		<input type="text" size="25" name="my-name" id="my-name">
+		</td>
+		</tr>
+		<tr>
+		<td>
+		address:
+		</td>
+		<td>
+		<input type="text" size="25" name="my-address">
+		</td>
+		</tr>
+		<tr>
+		<td>
+		Favourite drink:
+		</td>
+		<td>
+		<select name="my-drink">
+		<option> milk </option>
+		<option> tea </option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		Quantity:
+		</td>
+		<td>
+		<input type="number" name="my-qty" value="1" min="1" max="5"> 
+		<small> (max 5) </small>
+		</td>
+		</tr>
+		<tr>
+		<br>
+		</tr>
+		<tr>
+		<td colspan="2">
+		<input class="button" type="button" value="process Order" onclick="placeOrder();">
+		<input class="button" type="reset" value="Clear">
+		</td>
+		</tr>
+		</table>
+		<br>
+		<form >
+		<h1> 
+		Goofy Form: 
+		</h1>
+		What’s the silliest idea you have ever had?
+		<br>
+		<input type="text" size="50" placeholder="send your feedback..">
+		<br> <br>
+        <button> Submit </button>
+		<div id="my-order">
+		</div>
+		
+		</form>
+		</section>
+		<script>
+		function placeOrder()
+		{
+		results = "<h3> Success!</h3> Here is your order.";
+		var orderResults= document.getElementById("my-order");
+		orderResults.innerHTML= results;
+		}
+		</script>
+	</body>	
+</html>
